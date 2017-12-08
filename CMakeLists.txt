@@ -3,4 +3,4 @@ project(VectorGame)
 
 set(CPP_SRC main.cpp)
 
-add_executable(VectorGame $CPP_SRC)
+add_executable(VectorGame ${CPP_SRC})
