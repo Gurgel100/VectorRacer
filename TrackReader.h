@@ -10,6 +10,9 @@
  *
  * Created on December 8, 2017, 11:28 AM
  */
+#include <vector>
+#include <string>
+#include <Map.h>
 
 #ifndef TRACKREADER_H
 #define TRACKREADER_H
@@ -17,11 +20,17 @@
 class TrackReader
 {
 public:
-    TrackReader();
-    TrackReader(const TrackReader& orig);
-    virtual ~TrackReader();
+    TrackReader(const std::string& mapName);
+    ~TrackReader();
+    std::vector TrackReader::getMap();
+    void TrackReader::changeMap(const std::string& mapName);
 private:
-
+    Map trackMap;
+    char fileName[]; 
+    int imgHeight;
+    int imgWidth;
+    bool isNew;
+    void readTrack();
 };
 
 #endif /* TRACKREADER_H */
