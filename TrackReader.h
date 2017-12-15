@@ -12,7 +12,7 @@
  */
 #include <vector>
 #include <string>
-#include <Map.h>
+#include "Map.h"
 
 #ifndef TRACKREADER_H
 #define TRACKREADER_H
