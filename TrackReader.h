@@ -22,7 +22,7 @@ class TrackReader
 public:
     TrackReader(const std::string& mapName);
     ~TrackReader();
-    std::vector TrackReader::getMap();
+    Map TrackReader::getMap();
     void TrackReader::changeMap(const std::string& mapName);
 private:
     Map trackMap;
