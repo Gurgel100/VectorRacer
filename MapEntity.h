@@ -4,10 +4,15 @@ class MapEntity
 public:
 	enum class EntityType
 	{
-		EMPTY
+		Road,
+		Wall,
+		Gravel
 	};
 
-	MapEntity();
+	MapEntity(EntityType entityType);
 	~MapEntity();
+
+private:
+	EntityType entityType;
 };
 
