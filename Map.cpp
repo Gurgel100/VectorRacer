@@ -4,8 +4,13 @@
 
 using namespace std;
 
-Map::Map(size_t width, size_t height) : width(width), height(height)
+Map::Map(size_t width, size_t height, const vector<MapEntity::EntityType> &entityTypes, const vector<Checkpoint> &checkpoints)
+	: width(width), height(height), checkpoints(checkpoints)
 {
+	for (MapEntity::EntityType type : entityTypes)
+	{
+		entities.emplace_back(type);
+	}
 }
 
 Map::~Map()
